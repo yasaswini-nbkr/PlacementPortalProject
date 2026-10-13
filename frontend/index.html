@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerConnect | College Placement Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#home" class="brand">
+        <span class="brand-icon">C</span> CareerConnect
+    </a>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#jobs">Find Jobs</a>
+        <a href="#placement">Placements</a>
+        <a href="#my-applications">My Applications</a>
+        <a href="#career-guidance">Career Guidance</a>
+    </nav>
+    <a href="#login" class="nav-button" id="nav-login">Student Login ↗</a>
+<button type="button" class="nav-button" id="nav-logout" hidden>Log Out</button>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow">✦ YOUR CAREER STARTS HERE</span>
+            <h1>Your Future.<br><span>Our Connection.</span></h1>
+            <p>Discover exciting opportunities, connect with leading companies, and take the first step towards your dream career.</p>
+            <div class="hero-actions">
+                <a href="#jobs" class="primary-button">Explore Opportunities →</a>
+                <a href="#placement" class="secondary-button">Explore placements</a>
+            </div>
+            <div class="hero-note"><span class="online-dot"></span> Opportunities for ambitious students</div>
+        </div>
+        <div class="hero-visual">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+            <div class="floating-card card-top">
+                <span class="mini-icon">✦</span>
+                <div><strong>Dream big.</strong><small>Your next chapter awaits.</small></div>
+            </div>
+            <div class="illustration">
+                <div class="screen-top"><span></span><span></span><span></span></div>
+                <div class="screen-content">
+                    <div class="screen-sidebar"></div>
+                    <div class="screen-main">
+                        <div class="screen-line"></div>
+                        <div class="screen-line short"></div>
+                        <div class="screen-boxes"><i></i><i></i><i></i></div>
+                        <div class="screen-line"></div>
+                        <div class="screen-line medium"></div>
+                    </div>
+                </div>
+                <div class="person"><div class="person-head"></div><div class="person-body"></div></div>
+            </div>
+            <div class="floating-card card-bottom">
+                <span class="success-icon">✓</span>
+                <div><strong>Ready to launch?</strong><small>Your career journey begins today.</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats" id="placement">
+        <div><strong>01</strong><span>Explore opportunities</span></div>
+        <div><strong>02</strong><span>Connect with companies</span></div>
+        <div><strong>03</strong><span>Launch your career</span></div>
+        <div><strong>04</strong><span>Build your future</span></div>
+    </section>
+
+    <section class="jobs-section" id="jobs">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">OPPORTUNITIES AWAIT</span>
+                <h2>Find your <span>perfect role.</span></h2>
+                <p>Explore opportunities that match your ambitions.</p>
+            </div>
+            <span class="job-count" id="job-count">Loading jobs...</span>
+        </div>
+        <div class="search-panel">
+            <div class="search-field">
+                <span>⌕</span>
+                <input type="text" id="search-input" placeholder="Search job title or company...">
+            </div>
+            <select id="category-filter"><option value="">All Categories</option></select>
+            <button id="search-button" class="primary-button" type="button">Search Jobs</button>
+        </div>
+        <div class="job-grid" id="jobs-list"></div>
+        <p id="empty-message" class="empty-message" hidden>No matching jobs found. Try another search.</p>
+    </section>
+
+    <section class="cta">
+        <div>
+            <span class="eyebrow">YOUR NEXT CHAPTER</span>
+            <h2>Ambition meets opportunity.</h2>
+            <p>Take the next step towards a career you're proud of.</p>
+        </div>
+        <a href="#jobs" class="cta-button">Find your opportunity ↗</a>
+    </section>
+
+    <section class="login-section" id="login">
+        <div class="login-info">
+            <span class="eyebrow">STUDENT ACCESS</span>
+            <h2>Welcome to<br><span>your future.</span></h2>
+            <p>Create an account or sign in to explore your career opportunities.</p>
+            <p id="account-status" role="status"></p>
+            <p id="student-info">Not signed in</p>
+        </div>
+        <div class="login-card">
+            <div id="login-panel">
+                <h3>Student Login</h3>
+                <form id="login-form">
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                    <button type="submit">Sign In</button>
+                    <p id="login-message" role="status"></p>
+                </form>
+                <p>New student? <button type="button" id="show-register" class="text-button">Create an account</button></p>
+            </div>
+
+            <div id="register-panel" hidden>
+                <h3>Create Student Account</h3>
+                <form id="register-form">
+                    <label for="register-name">Full name</label>
+                    <input id="register-name" name="name" type="text" placeholder="Enter your full name" required>
+                    <label for="register-email">Email address</label>
+                    <input id="register-email" name="email" type="email" placeholder="you@example.com" required>
+                    <label for="register-password">Password</label>
+                    <input id="register-password" name="password" type="password" placeholder="At least 8 characters" minlength="8" required>
+                    <button type="submit" class="primary-button full-button">Create Account →</button>
+                </form>
+                <p id="register-message" role="status"></p>
+                <p>Already registered? <button type="button" id="show-login" class="text-button">Sign in</button></p>
+            </div>
+            <button type="button" id="logout-button" class="secondary-button" hidden>Log Out</button>
+        </div>
+    </section>
+
+    <section class="jobs-section" id="my-applications">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">APPLICATION TRACKER</span>
+                <h2>My <span>Applications.</span></h2>
+                <p>View the jobs you applied for and check your status.</p>
+            </div>
+        </div>
+        <button type="button" id="view-applications" class="primary-button">View My Applications</button>
+        <p id="applications-message" role="status"></p>
+        <div id="applications-section">
+            <div id="applications-list" style="overflow-x:auto; margin-top:20px;"></div>
+        </div>
+    </section>
+
+    <!-- NEW CAREER GUIDANCE FEATURES -->
+    <section class="career-section" id="career-guidance">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">GROW YOUR FUTURE</span>
+                <h2>Career <span>Guidance Center.</span></h2>
+                <p>Discover opportunities, build skills, and prepare for your dream job.</p>
+            </div>
+        </div>
+
+        <div class="career-grid">
+            <article class="career-card">
+                <h3>🎯 Smart Job Match</h3>
+                <p>Enter your skills to find related opportunities.</p>
+                <label for="student-skills">Your skills</label>
+                <input type="text" id="student-skills" placeholder="Python, HTML, SQL">
+                <button type="button" id="match-jobs-button">Find Matching Jobs</button>
+                <div id="job-match-results" aria-live="polite"></div>
+            </article>
+
+            <article class="career-card">
+                <h3>🗺️ Career Roadmap</h3>
+                <p>Choose a career path to see suggested learning steps.</p>
+                <label for="career-choice">Choose a career</label>
+                <select id="career-choice">
+                    <option value="web">Web Developer</option>
+                    <option value="python">Python Developer</option>
+                    <option value="java">Java Developer</option>
+                    <option value="data">Data Analyst</option>
+                </select>
+                <button type="button" id="roadmap-button">Show Roadmap</button>
+                <div id="roadmap-results" aria-live="polite"></div>
+            </article>
+
+            <article class="career-card">
+                <h3>🎤 Interview Practice</h3>
+                <p>Practice answering common interview questions.</p>
+                <button type="button" id="interview-question-button">Get a Question</button>
+                <p id="interview-question" aria-live="polite">Click the button to begin.</p>
+                <label for="interview-answer">Your answer</label>
+                <textarea id="interview-answer" rows="4" placeholder="Type your answer here"></textarea>
+                <button type="button" id="check-answer-button">Review My Answer</button>
+                <p id="interview-feedback" aria-live="polite"></p>
+            </article>
+
+            <article class="career-card">
+                <h3>📈 My Progress</h3>
+                <p>Track the skills you have practised.</p>
+                <div id="progress-skills" class="progress-skills">
+                    <label><input type="checkbox" value="HTML"> HTML</label>
+                    <label><input type="checkbox" value="CSS"> CSS</label>
+                    <label><input type="checkbox" value="JavaScript"> JavaScript</label>
+                    <label><input type="checkbox" value="SQL"> SQL</label>
+                    <label><input type="checkbox" value="Interview"> Interview preparation</label>
+                </div>
+                <div class="progress-track"><div id="progress-bar" class="progress-fill"></div></div>
+                <p id="progress-text" aria-live="polite">0% completed</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <a href="#home" class="brand"><span class="brand-icon">C</span> CareerConnect</a>
+    <p>Connecting talent with opportunity.</p>
+    <span>© 2026 CareerConnect · College Placement Portal</span>
+</footer>
+
+<div id="toast" class="toast" role="status"></div>
+<input type="file" id="resume-input" accept=".pdf,application/pdf" hidden>
+
+<script src="script.js"></script>
+</body>
+</html>
