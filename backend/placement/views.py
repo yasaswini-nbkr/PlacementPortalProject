@@ -218,3 +218,7 @@ def my_applications(request):
         })
 
     return JsonResponse(results, safe=False)
+def api_home(request):
+    return JsonResponse({
+        "message": "Placement Portal API is running!"
+    })
