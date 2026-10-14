@@ -7,7 +7,7 @@ SECRET_KEY = "django-insecure-dev-key-change-before-deployment"
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'placement-portal-backend-irmz.onrender.com']
 
 INSTALLED_APPS = [
     "corsheaders",
